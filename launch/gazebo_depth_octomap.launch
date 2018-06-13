@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <!-- Start Gazebo with wg world running in (max) realtime -->
+  <include file="$(find hector_gazebo_worlds)/launch/willow_garage.launch"/>
+
+  <!-- Spawn simulated quadrotor uav -->
+  <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor_with_kinect.launch" />
+
+  <!-- Activate the quadcoptor motors -->
+  <node pkg="rosservice" type="rosservice" name="motors_activator"
+      args="call --wait /enable_motors &quot;enable: true&quot;"/>
+
+  <!-- Start rviz visualization with preset config -->
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find caltech_samaritan)/rviz/depth_slam_octomap.rviz"/>
+
+  <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="hector_teleop" />
+  
+  <!-- Start OctoMap server -->
+  <include file="$(find caltech_samaritan)/launch/octomap_server.launch" />
+
+</launch>
