@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-
-<launch>
-
-    <!-- Start MoveIt pipeline -->
-    <include file="$(find hector_quadrotor_kinect_moveit_config)/launch/trajectory_execution.launch.xml" />
-    <include file="$(find hector_quadrotor_kinect_moveit_config)/launch/move_group.launch" />
-
-</launch>

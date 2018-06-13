@@ -30,10 +30,6 @@ packages are required:
    `ros-kinetic-teleop-twist-keyboard` package and then run
    `teleop_twist_keyboard teleop_twist_keyboard.py`.
    
-4. MoveIt is used for navigation, it can be installed via `apt` as
-   `ros-kinetic-moveit` and `ros-kinetic-moveit-plugins`. Among other things, this will install an RViz plugin
-   that is used to visualise MoveIt joints on the quadrotor.
-   
 4. The scripts in this repo are written in Python 2.7 (default version for ROS
    Kinetic).
 

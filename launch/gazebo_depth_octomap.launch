@@ -2,6 +2,8 @@
 
 <launch>
 
+    <rosparam param="use_sim_time">true</rosparam>
+
     <!-- Start Gazebo with wg world running in (max) realtime -->
     <include file="$(find hector_gazebo_worlds)/launch/start.launch">
         <arg name="gui" value="false"/>
