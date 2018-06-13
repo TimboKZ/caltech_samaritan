@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="hector_teleop"/>
+
+</launch>

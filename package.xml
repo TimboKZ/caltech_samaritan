@@ -1,25 +1,30 @@
 <?xml version="1.0"?>
-<package>
-  <name>caltech_samaritan</name>
-  <version>0.0.1</version>
-  <description>Autonomy project for CS 134</description>
-  <maintainer email="timbokz@caltech.edu">Timur Kuzhagaliyev</maintainer>
+<package format="2">
+    <name>caltech_samaritan</name>
+    <version>0.0.1</version>
+    <description>Autonomy project for CS 134</description>
+    <maintainer email="timbokz@caltech.edu">Timur Kuzhagaliyev</maintainer>
 
-  <license>MIT</license>
+    <license>MIT</license>
 
-  <url type="website">https://github.com/TimboKZ/Samaritan</url>
-  <!-- <url type="bugtracker"></url> -->
+    <url type="website">https://github.com/TimboKZ/Samaritan</url>
+    <!-- <url type="bugtracker"></url> -->
 
-  <author email="timbokz@caltech.edu">Timur Kuzhagaliyev</author>
-  <author email="qingzhuo@caltech.edu">Qingzhuo Aw Young</author>
+    <author email="timbokz@caltech.edu">Timur Kuzhagaliyev</author>
+    <author email="qingzhuo@caltech.edu">Qingzhuo Aw Young</author>
 
-  <!-- Dependencies which this package needs to build itself. -->
-  <buildtool_depend>catkin</buildtool_depend>
+    <!-- Dependencies which this package needs to build itself. -->
+    <buildtool_depend>catkin</buildtool_depend>
 
-  <!-- Dependencies needed after this package is compiled. -->
-  <run_depend>hector_gazebo</run_depend>
+    <!-- ROS package dependencies -->
+    <exec_depend>hector_gazebo</exec_depend>
+    <exec_depend>moveit</exec_depend>
 
-  <export>
-  </export>
+    <!-- Python dependencies -->
+    <exec_depend>rospy</exec_depend>
+    <exec_depend>geometry_msgs</exec_depend>
+
+    <export>
+    </export>
 
 </package>

@@ -1,7 +1,7 @@
 # Caltech Samaritan
 
-Drone SLAM project for Caltech's *ME 134 Autonomy* class. This repository can
-be cloned as a ROS package.
+Autonomous SLAM & exploration using drones, a project for Caltech's *ME 134
+Autonomy* class. This repository can be cloned as a ROS package.
 
 # Demo
 
@@ -27,8 +27,15 @@ packages are required:
    visualisations in RViz will not work.
 
 3. To control the drone manually, you might need to install the
-   `ros-kinetic-teleop-twist-keyboard` package and the run
+   `ros-kinetic-teleop-twist-keyboard` package and then run
    `teleop_twist_keyboard teleop_twist_keyboard.py`.
+   
+4. MoveIt is used for navigation, it can be installed via `apt` as
+   `ros-kinetic-moveit` and `ros-kinetic-moveit-plugins`. Among other things, this will install an RViz plugin
+   that is used to visualise MoveIt joints on the quadrotor.
+   
+4. The scripts in this repo are written in Python 2.7 (default version for ROS
+   Kinetic).
 
 # Usage
 
@@ -38,7 +45,8 @@ packages are required:
    into `~/catkin_ws/src/caltech_samaritan/`.
 3. Source appropriate ROS files in your Bash instance, i.e. run `source
    /opt/ros/kinetic/setup.bash` and `source ~/catkin_ws/devel/setup.bash`.
-4. Run `catkin_make` in `~/catkin_ws/`.
+4. Run `catkin_make` in `~/catkin_ws/` and `source
+   ~/catkin_ws/devel/setup.bash` again.
 5. Start the simulation using `roslaunch caltech_samaritan
    gazebo_depth_octomap.launch`. This launch file will:
    1. Initialize Gazebo with a sample enivronment,
