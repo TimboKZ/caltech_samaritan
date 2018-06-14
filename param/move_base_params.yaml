@@ -54,6 +54,7 @@ base_global_planner: "navfn/NavfnROS" #alternatives: global_planner/GlobalPlanne
 #aggressive_reset2:
   #reset_distance: 0.0
 
+
 recovery_behaviors:
   - name: 'conservative_reset'
     type: 'clear_costmap_recovery/ClearCostmapRecovery'
@@ -62,6 +63,8 @@ recovery_behaviors:
 
 conservative_reset:
   reset_distance: 3.0
+  layer_names: ['obstacle_layer']
 
 aggressive_reset:
   reset_distance: 0.0
+  layer_names: ['obstacle_layer']
