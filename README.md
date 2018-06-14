@@ -49,13 +49,13 @@ packages are required:
    /opt/ros/kinetic/setup.bash` and `source ~/catkin_ws/devel/setup.bash`.
 4. Run `catkin_make` in `~/catkin_ws/` and `source
    ~/catkin_ws/devel/setup.bash` again.
-5. Start the simulation using `roslaunch caltech_samaritan
-   gazebo_depth_octomap.launch`. This launch file will:
-   1. Initialize Gazebo with a sample enivronment,
+5. Start the simulation using `roslaunch caltech_samaritan full.launch`. This launch file will:
+   1. Initialize Gazebo with a sample environment,
    2. Spawn a simulated quadrotor with a Kinect attached to it and activate its
       motors,
-   3. Launch RViz with a custom config, and
-   4. Start an OctoMap server, generating occupancy grid in real time.
+   3. Launch RViz with a custom config,
+   4. Start an OctoMap server, generating occupancy grid in real time, and
+   5. Initialise the navigation stack.
 6. (Optional) If you want to control the drone manually, you can use the script mentioned in the previous section.
    Alternatively, you can use `roslaunch caltech_samaritan teleop.launch` but it requires [pynput](https://pypi.org/project/pynput/)
    package to be installed.

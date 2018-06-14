@@ -23,6 +23,7 @@
     <!-- Start OctoMap server to generate voxel occupancy grid and a projected 2d occupancy grid -->
     <include file="$(find caltech_samaritan)/launch/octomap_server.launch"/>
 
-    <!-- Start costmap_2d -->
+    <!-- Start the navigation stack -->
+    <include file="$(find caltech_samaritan)/launch/navigation.launch"/>
 
 </launch>
