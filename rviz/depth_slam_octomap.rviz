@@ -4,8 +4,8 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /Global Options1
         - /DepthCloud1/Auto Size1
+        - /OccupancyGrid1/Status1
       Splitter Ratio: 0.5
     Tree Height: 676
   - Class: rviz/Selection
@@ -100,7 +100,7 @@ Visualization Manager:
       Color Scheme: map
       Draw Behind: false
       Enabled: true
-      Name: Map
+      Name: 2D octomap
       Topic: /map
       Unreliable: false
       Use Timestamp: false
@@ -205,18 +205,66 @@ Visualization Manager:
       Octomap Topic: /octomap_binary
       Queue Size: 5
       Value: true
-      Voxel Alpha: 0.100000001
+      Voxel Alpha: 1
       Voxel Coloring: Z-Axis
       Voxel Rendering: Occupied Voxels
     - Alpha: 0.699999988
       Class: rviz/Map
-      Color Scheme: map
+      Color Scheme: costmap
       Draw Behind: false
       Enabled: true
-      Name: Map
+      Name: Global costmap
       Topic: /move_base/global_costmap/costmap
       Unreliable: false
       Use Timestamp: false
+      Value: true
+    - Alpha: 0.699999988
+      Class: rviz/Map
+      Color Scheme: costmap
+      Draw Behind: false
+      Enabled: true
+      Name: Local costmap
+      Topic: /move_base/local_costmap/costmap
+      Unreliable: true
+      Use Timestamp: false
+      Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz/Path
+      Color: 255; 0; 0
+      Enabled: true
+      Head Diameter: 0.300000012
+      Head Length: 0.200000003
+      Length: 0.300000012
+      Line Style: Billboards
+      Line Width: 0.0299999993
+      Name: Planned path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.0299999993
+      Shaft Diameter: 0.100000001
+      Shaft Length: 0.100000001
+      Topic: /move_base/NavfnROS/plan
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Axes Length: 1
+      Axes Radius: 0.100000001
+      Class: rviz/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.300000012
+      Head Radius: 0.100000001
+      Name: Goal pose
+      Shaft Length: 1
+      Shaft Radius: 0.0500000007
+      Shape: Arrow
+      Topic: /move_base/current_goal
+      Unreliable: false
       Value: true
   Enabled: true
   Global Options:
@@ -243,25 +291,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 8.45773506
+      Distance: 8.11457253
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -1.00484419
-        Y: -0.806527495
-        Z: -1.25381589
+        X: 0.349164069
+        Y: 0.77322191
+        Z: 2.18152952
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.769796968
+      Pitch: 1.02479672
       Target Frame: base_stabilized
       Value: Orbit (rviz)
-      Yaw: 2.97036266
+      Yaw: 2.05404997
     Saved: ~
 Window Geometry:
   Displays:

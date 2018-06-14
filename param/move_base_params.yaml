@@ -23,7 +23,6 @@ base_global_planner: "navfn/NavfnROS" #alternatives: global_planner/GlobalPlanne
 #We plan to integrate recovery behaviors for turtlebot but currently those belong to gopher and still have to be adapted.
 ## recovery behaviors; we avoid spinning, but we need a fall-back replanning
 #recovery_behavior_enabled: true
-
 #recovery_behaviors:
   #- name: 'super_conservative_reset1'
     #type: 'clear_costmap_recovery/ClearCostmapRecovery'
@@ -54,3 +53,15 @@ base_global_planner: "navfn/NavfnROS" #alternatives: global_planner/GlobalPlanne
   #reset_distance: 1.5
 #aggressive_reset2:
   #reset_distance: 0.0
+
+recovery_behaviors:
+  - name: 'conservative_reset'
+    type: 'clear_costmap_recovery/ClearCostmapRecovery'
+  - name: 'aggressive_reset'
+    type: 'clear_costmap_recovery/ClearCostmapRecovery'
+
+conservative_reset:
+  reset_distance: 3.0
+
+aggressive_reset:
+  reset_distance: 0.0
