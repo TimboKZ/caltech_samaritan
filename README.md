@@ -31,7 +31,11 @@ packages are required:
    `teleop_twist_keyboard teleop_twist_keyboard.py`. *There is a better tool* described in the next section, but it
    requires [pynput](https://pypi.org/project/pynput/) Python package to be installed (and available to ROS).
    
-4. The scripts in this repo are written in Python 2.7 (default version for ROS
+4. Robot navigation is handled using the standard ROS navigation stack, namely `move_base`, so make sure you have that
+   installed. Additionally, [DWA local planner](http://wiki.ros.org/dwa_local_planner) is used, which can be installed
+   via `apt` as `ros-kinetic-dwa-local-planner`.
+   
+5. The scripts in this repo are written in Python 2.7 (default version for ROS
    Kinetic). Packages [pynput](https://pypi.org/project/pynput/), [numpy](http://www.numpy.org/) are required for Python
    scripts to work.
 
