@@ -20,6 +20,5 @@
     </node>
 
     <node pkg="tf" type="static_transform_publisher" name="map_tf_publisher" args="0 0 0 0 0 0 1 /map /world 100" />
-    <!--<node pkg="caltech_samaritan" type="remap_world_map_tf.py" name="remap_world_map_tf"/>-->
 
 </launch>
