@@ -230,14 +230,14 @@ Visualization Manager:
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
-      Color: 255; 0; 0
+      Color: 0; 170; 0
       Enabled: true
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
       Line Style: Billboards
       Line Width: 0.0299999993
-      Name: Planned path
+      Name: Global plan
       Offset:
         X: 0
         Y: 0
@@ -265,6 +265,29 @@ Visualization Manager:
       Topic: /move_base/current_goal
       Unreliable: false
       Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz/Path
+      Color: 255; 0; 0
+      Enabled: true
+      Head Diameter: 0.300000012
+      Head Length: 0.200000003
+      Length: 0.300000012
+      Line Style: Billboards
+      Line Width: 0.0299999993
+      Name: Local plan
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.0299999993
+      Shaft Diameter: 0.100000001
+      Shaft Length: 0.100000001
+      Topic: /move_base/DWAPlannerROS/local_plan
+      Unreliable: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -290,25 +313,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.12929964
+      Distance: 3.40460396
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.0915288255
-        Y: -0.918587267
-        Z: 1.83582175
+        X: -0.109634116
+        Y: -1.91256177
+        Z: 1.47527099
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 1.29479647
+      Pitch: 0.989796638
       Target Frame: base_stabilized
       Value: Orbit (rviz)
-      Yaw: 3.34905577
+      Yaw: 4.21405268
     Saved: ~
 Window Geometry:
   Displays:

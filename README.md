@@ -60,6 +60,10 @@ packages are required:
 6. (Optional) If you want to control the drone manually, you can use the script mentioned in the previous section.
    Alternatively, you can use `roslaunch caltech_samaritan teleop.launch` but it requires [pynput](https://pypi.org/project/pynput/)
    package to be installed.
-7. Start the exploration script with `rosrun caltech_samaritan start_exploration.py`.
-8. ???
-9. Profit!
+7. (Optional) If you want to test the navigation stack manually, you can do the following: First, using teleop
+   instructions from the step above, fly around for a bit to make sure the navigation stack has something to work with;
+   Second, start the hover script using `rosrun caltech_samaritan force_hover.py`. Now you can issue "2D Nav Goals"
+   using rviz interface to see the navigation stack in action.
+8. Start the exploration script with `rosrun caltech_samaritan start_exploration.py`.
+9. ???
+10. Profit!

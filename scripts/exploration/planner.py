@@ -40,8 +40,6 @@ class Planner:
         pos_x, pos_y, yaw = self.store.get_pose()
         angle_to_goal = math.atan2(y - pos_y, x - pos_x)
 
-        print('goal cell: {}, {}    ;    goal coords: {}, {}      ;   cell_value: {}'.format(ia, ib, x, y, self.store.get_global_costmap()[ia, ib]))
-
         return x, y, angle_to_goal
 
     def find_safe_place_to_observe(self, ia, ib):
