@@ -101,7 +101,7 @@ Visualization Manager:
       Draw Behind: false
       Enabled: true
       Name: Map
-      Topic: /projected_map
+      Topic: /map
       Unreliable: false
       Use Timestamp: false
       Value: true
@@ -200,19 +200,29 @@ Visualization Manager:
       Enabled: true
       Max. Height Display: 3.40282347e+38
       Max. Octree Depth: 16
-      Min. Height Display: -3.40282347e+38
+      Min. Height Display: 0.100000001
       Name: OccupancyGrid
       Octomap Topic: /octomap_binary
       Queue Size: 5
       Value: true
-      Voxel Alpha: 0.5
+      Voxel Alpha: 0.100000001
       Voxel Coloring: Z-Axis
       Voxel Rendering: Occupied Voxels
+    - Alpha: 0.699999988
+      Class: rviz/Map
+      Color Scheme: map
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic: /move_base/global_costmap/costmap
+      Unreliable: false
+      Use Timestamp: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: world
+    Fixed Frame: map
     Frame Rate: 30
   Name: root
   Tools:
@@ -233,25 +243,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 6.1021409
+      Distance: 8.45773506
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.53856409
-        Y: -1.14368916
-        Z: 0.239095762
+        X: -1.00484419
+        Y: -0.806527495
+        Z: -1.25381589
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 1.47039831
+      Pitch: 0.769796968
       Target Frame: base_stabilized
       Value: Orbit (rviz)
-      Yaw: 2.92040277
+      Yaw: 2.97036266
     Saved: ~
 Window Geometry:
   Displays:

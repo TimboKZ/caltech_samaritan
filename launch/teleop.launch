@@ -2,6 +2,6 @@
 
 <launch>
 
-    <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="hector_teleop"/>
+    <node pkg="caltech_samaritan" type="quadrotor_teleop.py" name="quadrotor_teleop" output="screen"/>
 
 </launch>

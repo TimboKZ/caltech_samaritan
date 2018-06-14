@@ -1,4 +1,5 @@
 <launch>
+
     <node pkg="octomap_server" type="octomap_server_node" name="octomap_server">
         <param name="resolution" value="0.15"/>
 
@@ -6,12 +7,18 @@
         <param name="frame_id" type="string" value="world"/>
 
         <!-- maximum range to integrate (speedup!) -->
-        <param name="sensor_model/max_range" value="5.0"/>
+        <param name="sensor_model/max_range" value="6.0"/>
 
         <!-- cut off the floor to make 2d projection better -->
         <param name="occupancy_min_z" value="0.2"/>
 
         <!-- data source to integrate (PointCloud2) -->
         <remap from="cloud_in" to="/camera/depth/points"/>
+
+        <!-- remap projected_map to map -->
+        <remap from="projected_map" to="map"/>
     </node>
+
+    <node pkg="tf" type="static_transform_publisher" name="map_tf_publisher" args="0 0 0 0 0 0 1 /world /map 100" />
+
 </launch>

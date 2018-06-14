@@ -20,7 +20,9 @@
     <!-- Start rviz visualization with preset config -->
     <node pkg="rviz" type="rviz" name="rviz" args="-d $(find caltech_samaritan)/rviz/depth_slam_octomap.rviz"/>
 
-    <!-- Start OctoMap server -->
+    <!-- Start OctoMap server to generate voxel occupancy grid and a projected 2d occupancy grid -->
     <include file="$(find caltech_samaritan)/launch/octomap_server.launch"/>
+
+    <!-- Start costmap_2d -->
 
 </launch>

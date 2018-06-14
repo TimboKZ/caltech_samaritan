@@ -28,10 +28,12 @@ packages are required:
 
 3. To control the drone manually, you might need to install the
    `ros-kinetic-teleop-twist-keyboard` package and then run
-   `teleop_twist_keyboard teleop_twist_keyboard.py`.
+   `teleop_twist_keyboard teleop_twist_keyboard.py`. *There is a better tool* described in the next section, but it
+   requires [pynput](https://pypi.org/project/pynput/) Python package to be installed (and available to ROS).
    
 4. The scripts in this repo are written in Python 2.7 (default version for ROS
-   Kinetic).
+   Kinetic). Packages [pynput](https://pypi.org/project/pynput/), [numpy](http://www.numpy.org/) are required for Python
+   scripts to work.
 
 # Usage
 
@@ -50,5 +52,9 @@ packages are required:
       motors,
    3. Launch RViz with a custom config, and
    4. Start an OctoMap server, generating occupancy grid in real time.
-6. ???
-7. Profit!
+6. (Optional) If you want to control the drone manually, you can use the script mentioned in the previous section.
+   Alternatively, you can use `roslaunch caltech_samaritan teleop.launch` but it requires [pynput](https://pypi.org/project/pynput/)
+   package to be installed.
+7. Start the exploration script with `rosrun caltech_samaritan start_exploration.py`.
+8. ???
+9. Profit!
