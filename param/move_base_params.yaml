@@ -62,7 +62,7 @@ recovery_behaviors:
     type: 'clear_costmap_recovery/ClearCostmapRecovery'
 
 conservative_reset:
-  reset_distance: 3.0
+  reset_distance: 0.1
   layer_names: ['obstacle_layer']
 
 aggressive_reset:

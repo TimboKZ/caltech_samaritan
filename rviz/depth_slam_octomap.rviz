@@ -5,7 +5,6 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /DepthCloud1/Auto Size1
-        - /OccupancyGrid1/Status1
       Splitter Ratio: 0.5
     Tree Height: 676
   - Class: rviz/Selection
@@ -208,7 +207,7 @@ Visualization Manager:
       Voxel Alpha: 1
       Voxel Coloring: Z-Axis
       Voxel Rendering: Occupied Voxels
-    - Alpha: 0.699999988
+    - Alpha: 1
       Class: rviz/Map
       Color Scheme: costmap
       Draw Behind: false
@@ -218,7 +217,7 @@ Visualization Manager:
       Unreliable: false
       Use Timestamp: false
       Value: true
-    - Alpha: 0.699999988
+    - Alpha: 1
       Class: rviz/Map
       Color Scheme: costmap
       Draw Behind: false
@@ -291,25 +290,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 8.11457253
+      Distance: 3.12929964
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.349164069
-        Y: 0.77322191
-        Z: 2.18152952
+        X: -0.0915288255
+        Y: -0.918587267
+        Z: 1.83582175
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 1.02479672
+      Pitch: 1.29479647
       Target Frame: base_stabilized
       Value: Orbit (rviz)
-      Yaw: 2.05404997
+      Yaw: 3.34905577
     Saved: ~
 Window Geometry:
   Displays:

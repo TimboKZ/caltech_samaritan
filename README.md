@@ -37,7 +37,8 @@ packages are required:
    
 5. The scripts in this repo are written in Python 2.7 (default version for ROS
    Kinetic). Packages [pynput](https://pypi.org/project/pynput/), [numpy](http://www.numpy.org/) are required for Python
-   scripts to work.
+   scripts to work, all of which can be installed using `pip`. `ros_numpy` is also required, it can be installed via
+   `apt` as `ros-kinetic-ros-numpy`.
 
 # Usage
 
