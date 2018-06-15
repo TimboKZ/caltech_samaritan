@@ -82,13 +82,16 @@ class Planner:
         for f_ia, f_ib in f_candidates:
             eig = self.goal_eig(f_ia, f_ib)
             if eig > max_eig:
+                # Check if the goal with best EIG is possible to observer safely
+                goal_safe = self.find_safe_space_to_observe(f_ia, f_ib)
+                if goal_safe is None:
+                    continue
                 max_eig = eig
                 best_frontier = (f_ia, f_ib)
 
         # Find a safe place to observe the best frontier
         if best_frontier is not None:
-            goal_ia, goal_ib = best_frontier
-            goal_safe_ia, goal_safe_ib = self.find_safe_space_to_observe(goal_ia, goal_ib)
+            goal_safe_ia, goal_safe_ib = best_frontier
             goal_x, goal_y = self.indices_to_meters(goal_safe_ia, goal_safe_ib)
 
             pos_x, pos_y, yaw = self.store.get_pose()
