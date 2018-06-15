@@ -3,7 +3,7 @@ import rospy
 from sensor_msgs.msg import Range
 from geometry_msgs.msg import Twist
 
-HOVER_HEIGHT = 0.6
+HOVER_HEIGHT = 1.0
 
 last_twist_msg = None
 sonar_height = None

@@ -77,6 +77,9 @@ class DataStore:
     def sonar_height_callback(self, height_data):
         self.sonar_height = height_data.range
 
+    def get_map(self):
+        return self.last_map
+
     def get_map_raw(self):
         return self.last_map_raw
 

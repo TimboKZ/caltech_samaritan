@@ -34,6 +34,9 @@ class Core:
                 State.Land,
                 State.Done,
             ],
+
+            # Radius in meters around a blacklisted goal that the robot will ignore
+            'blacklisted_goal_radius': 0.6
         }
 
         self.store = DataStore()
@@ -66,7 +69,7 @@ class Core:
             return State.ExploreStart if self.actions.takeoff() else None
 
         elif state == State.ExploreStart:
-            return State.FindGoal
+            return State.FullRadialScan
 
         elif state == State.FullRadialScan:
             fr_scan_start = self.temp_data.get('fr_scan_start')

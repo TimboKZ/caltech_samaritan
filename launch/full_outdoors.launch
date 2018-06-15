@@ -7,7 +7,7 @@
     <!-- Start Gazebo with wg world running in (max) realtime -->
     <include file="$(find hector_gazebo_worlds)/launch/start.launch">
         <arg name="gui" value="false"/>
-        <arg name="world" value="$(find caltech_samaritan)/worlds/small_indoor_scenario.world"/>
+        <arg name="world" value="$(find hector_gazebo_worlds)/worlds/rolling_landscape_120m.world"/>
     </include>
 
     <!-- Spawn simulated quadrotor uav -->
@@ -22,5 +22,8 @@
 
     <!-- Start OctoMap server to generate voxel occupancy grid and a projected 2d occupancy grid -->
     <include file="$(find caltech_samaritan)/launch/octomap_server.launch"/>
+
+    <!-- Start the navigation stack -->
+    <include file="$(find caltech_samaritan)/launch/navigation.launch"/>
 
 </launch>

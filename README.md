@@ -50,8 +50,8 @@ packages are required:
    /opt/ros/kinetic/setup.bash` and `source ~/catkin_ws/devel/setup.bash`.
 4. Run `catkin_make` in `~/catkin_ws/` and `source
    ~/catkin_ws/devel/setup.bash` again.
-5. Start the simulation using `roslaunch caltech_samaritan full.launch`. This launch file will:
-   1. Initialize Gazebo with a sample environment,
+5. Start the simulation using `roslaunch caltech_samaritan full_indoors.launch`. This launch file will:
+   1. Initialize Gazebo with a sample indoors environment (if you want to try outdoors, use `full_outdoors.launch`),
    2. Spawn a simulated quadrotor with a Kinect attached to it and activate its
       motors,
    3. Launch RViz with a custom config,
