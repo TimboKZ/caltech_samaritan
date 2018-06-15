@@ -247,7 +247,7 @@ class Planner:
         if goal_status == GoalStatus.PENDING:
             return False
 
-        if goal_status == GoalStatus.ACTIVE:
+        elif goal_status == GoalStatus.ACTIVE:
             if self.last_planned_cmd_vel_msg is None:
                 return False
 
@@ -262,21 +262,28 @@ class Planner:
             )
             return False
 
-        if goal_status in [GoalStatus.RECALLED, GoalStatus.REJECTED, GoalStatus.PREEMPTED, GoalStatus.ABORTED]:
-            rospy.logwarn('Goal was recalled, rejected, preempted or aborted - this goal was blacklisted.')
+        elif goal_status in [GoalStatus.RECALLED, GoalStatus.PREEMPTED]:
+            rospy.logwarn('Goal was recalled or preempted.')
+            return True
+
+        elif goal_status in [GoalStatus.REJECTED, GoalStatus.ABORTED]:
+            rospy.logwarn('Goal was rejected or aborted - this goal was blacklisted.')
             self.blacklisted_goals.append(self.last_goal)
             self.last_goal = None
             return True
 
-        if goal_status == GoalStatus.SUCCEEDED:
+        elif goal_status == GoalStatus.SUCCEEDED:
             rospy.loginfo('Goal succeeded.')
             self.last_goal = None
             return True
 
-        if goal_status == GoalStatus.LOST:
+        elif goal_status == GoalStatus.LOST:
             rospy.loginfo('Goal was lost!')
             self.last_goal = None
             return True
+
+        rospy.logwarn('Unrecognised goal status was returned! Assuming goal reaching behaviour terminated.')
+        return True
 
     def publish_goal(self, x_coord, y_coord, yaw):
         rospy.loginfo(" requesting to move to {}".format((x_coord, y_coord, yaw)))

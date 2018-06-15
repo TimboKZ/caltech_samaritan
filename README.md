@@ -32,8 +32,9 @@ packages are required:
    requires [pynput](https://pypi.org/project/pynput/) Python package to be installed (and available to ROS).
    
 4. Robot navigation is handled using the standard ROS navigation stack, namely `move_base`, so make sure you have that
-   installed. Additionally, [DWA local planner](http://wiki.ros.org/dwa_local_planner) is used, which can be installed
-   via `apt` as `ros-kinetic-dwa-local-planner`.
+   installed. Additionally, [TEB local planner](http://wiki.ros.org/teb_local_planner) is used, which can be installed
+   via `apt` as `ros-kinetic-teb-local-planner`. Make sure you have `ros-kinect-pointcloud-to-laserscan` installed for
+   costmaps to work correctly.
    
 5. The scripts in this repo are written in Python 2.7 (default version for ROS
    Kinetic). Packages [pynput](https://pypi.org/project/pynput/), [numpy](http://www.numpy.org/) are required for Python
