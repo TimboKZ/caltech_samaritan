@@ -36,7 +36,7 @@ class Core:
             ],
 
             # Radius in meters around a blacklisted goal that the robot will ignore
-            'blacklisted_goal_radius': 0.6
+            'blacklisted_goal_radius': 2.0
         }
 
         self.store = DataStore()

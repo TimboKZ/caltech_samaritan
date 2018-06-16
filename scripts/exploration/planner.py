@@ -87,7 +87,7 @@ class Planner:
                 if goal_safe is None:
                     continue
                 max_eig = eig
-                best_frontier = (f_ia, f_ib)
+                best_frontier = goal_safe
 
         # Find a safe place to observe the best frontier
         if best_frontier is not None:

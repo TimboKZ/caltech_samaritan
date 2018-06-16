@@ -11,6 +11,7 @@
   <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan">
     <param name="min_height" value="0.3"/>
     <param name="max_height" value="1.7"/>
+    <param name="range_min" value="0.2"/>
     <param name="target_frame" value="camera_link"/>
 
     <remap from="cloud_in" to="$(arg depth_topic)"/>
